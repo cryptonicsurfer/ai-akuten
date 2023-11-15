@@ -242,10 +242,10 @@ export default function Example() {
 
         {/* Header section */}
         <div className="px-6 pt-14 lg:px-8">
-          <div className="mx-auto max-w-2xl pt-24 sm:text-center sm:pt-40">
+          <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
             {/* <h2 className="text-6xl font-bold tracking-tight text-white sm:text-6xl my-4">AI<span className="text-pink-600 animate-pulse">+</span>akuten </h2> */}
 
-            <h2 className="text-6xl font-bold tracking-tight text-white sm:text-6xl my-4 font-bungee-hairline">
+            <h2 className="text-5xl font-bold tracking-tight text-white sm:text-6xl my-4 font-bungee-hairline">
               AI<span className="text-pink-600 animate-pulse">+</span>akuten
             </h2>
             {/* <h3   className="text-2xl font-bold tracking-tight text-white sm:text-2xl" style={{ fontFamily: "'Bungee Hairline', sans-serif" }}>

@@ -54,7 +54,7 @@ export default function Chat() {
     // append({'role': 'system', 'content': 'continue'}) 
   };
   return (
-    <div className="mx-auto max-w-3xl sm:px-6 lg:px-8 bg-indigo-950 bg-opacity-75 text-emerald-300">
+    <div className="mx-auto max-w-3xl sm:px-6 lg:px-8 bg-indigo-950 bg-opacity-75 text-emerald-300 ">
       <div className="flex flex-col-reverse min-h-[80vh]">
         {/* Chat input form */}
         <div className="flex flex-col p-2">
