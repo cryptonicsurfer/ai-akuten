@@ -8,6 +8,9 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+          'bungee-hairline': ['"Bungee Hairline"', 'sans serif']
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

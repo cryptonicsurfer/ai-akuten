@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react';
-// import { useState } from 'react'
 import Image from 'next/image'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -144,44 +143,16 @@ function Photos() {
   );
 }
 
-
-// function Photos() {
-//   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-//   return (
-//     <div className="mt-16 sm:mt-20">
-//       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-//         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-//           <div
-//             key={image.src}
-//             className={clsx(
-//               'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-//               rotations[imageIndex % rotations.length],
-//             )}
-//           >
-//             <Image
-//               src={image}
-//               alt=""
-//               sizes="(min-width: 640px) 18rem, 11rem"
-//               className="absolute inset-0 h-full w-full object-cover"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
 
   return (
     <>
-    <style> {`@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');`}</style>
     <div className="bg-gray-900">
       <Modal open={modalOpen} setOpen={setModalOpen} content={<Chat />} />
       {/* Header */}
-      <header className="absolute inset-x-0 top-0 ">
+      <header className="absolute inset-x-0 top-0 z-10">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="/" className="p-1.5 flex space-x-2">
@@ -191,7 +162,7 @@ export default function Example() {
                 // https://ideogram.ai/api/images/direct/GP9Scs0PRfG0Wd-_uq38Gg.jpg
                 alt=""
               />
-              <span className="text-xl my-auto" style={{ fontFamily: "'Bungee Hairline', sans-serif" }}>AI<span className="text-pink-600 animate-pulse">+</span>akuten</span>
+              <span className="text-xl my-auto font-bold font-bungee-hairline" >AI<span className="text-pink-600 animate-pulse">+</span>akuten</span>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -218,10 +189,10 @@ export default function Example() {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">AI-akuten</span>
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  src="logo.png"
                   alt=""
                 />
               </a>
@@ -241,19 +212,12 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
+                      onClick={()=>setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
                     >
                       {item.name}
                     </a>
                   ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    Log in
-                  </a>
                 </div>
               </div>
             </div>
@@ -281,7 +245,7 @@ export default function Example() {
           <div className="mx-auto max-w-2xl pt-24 sm:text-center sm:pt-40">
             {/* <h2 className="text-6xl font-bold tracking-tight text-white sm:text-6xl my-4">AI<span className="text-pink-600 animate-pulse">+</span>akuten </h2> */}
 
-            <h2 className="text-6xl font-bold tracking-tight text-white sm:text-6xl my-4" style={{ fontFamily: "'Bungee Hairline', sans-serif" }}>
+            <h2 className="text-6xl font-bold tracking-tight text-white sm:text-6xl my-4 font-bungee-hairline">
               AI<span className="text-pink-600 animate-pulse">+</span>akuten
             </h2>
             {/* <h3   className="text-2xl font-bold tracking-tight text-white sm:text-2xl" style={{ fontFamily: "'Bungee Hairline', sans-serif" }}>
@@ -293,7 +257,7 @@ export default function Example() {
             <button
               type="button"
               onClick={() => setModalOpen(true)}
-              className="flex mx-auto mt-6 rounded-md bg-pink-600 px-3.5 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="flex mx-auto mt-6 rounded-md bg-pink-600 px-3.5 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               {/* <FontAwesomeIcon icon={faRobot} />  */}
               Starta chat
@@ -322,7 +286,7 @@ export default function Example() {
                   <figcaption className="mt-10 flex items-center gap-x-6">
                     <img
                       className="h-14 w-14 rounded-full bg-gray-800"
-                      src="https://www.skogssallskapet.se/images/18.f55596516adac33b488a720/1559546579484/Carl%20Pfeiff.JPG"
+                      src="/Carl Pfeiff.jpeg"
                       alt=""
                     />
                     <div className="text-base">
@@ -343,7 +307,7 @@ export default function Example() {
                   <figcaption className="mt-10 flex items-center gap-x-6">
                     <img
                       className="h-14 w-14 rounded-full bg-gray-800"
-                      src="https://naringslivetfalkenberg.se/wp-content/uploads/2020/08/Marinette_Ndag-kvadrat-560x560.jpg"
+                      src="/Marinette_Ndag-kvadrat-560x560.jpg"
                       alt=""
                     />
                     <div className="text-base">
@@ -360,7 +324,7 @@ export default function Example() {
         {/* Content section */}
         <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h2 className='mt-6 mb-10 animate-pulse text-5xl text-pink-600 lg:mx-0' style={{ fontFamily: "'Bungee Hairline', sans-serif" }}> Tekniken är här - ta steget med oss </h2>
+          <h2 className='mt-6 mb-10 animate-pulse text-5xl text-pink-600 text-center font-bold font-bungee-hairline'> Tekniken är här - ta steget med oss </h2>
             <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
               <div>
                 <p>
@@ -378,31 +342,23 @@ export default function Example() {
                 Med AI<span className='text-pink-600 font-bold'>+</span>akuten, blir AI-resan klarare och enklare. Vi stödjer er att utforska och tillämpa AI’s potential. Ta steget mot innovation med oss.
                 </p>
                 <p className="mt-8">
-                  <a href="/book" className="text-sm font-semibold leading-6 text-pink-600 flex">
-                    <span class="relative flex h-3 w-3 my-auto mr-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-3 w-3 bg-pink-600"></span>
+                  <a href="/book" target="_blank" className="text-sm font-semibold leading-6 text-pink-600 flex">
+                    <span className="relative flex h-3 w-3 my-auto mr-3">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-600"></span>
                     </span>
                     Boka ett möte <span aria-hidden="true">&rarr;</span>
                   </a>
                 </p>
               </div>
             </div>
-            {/* <dl className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
-              {stats.map((stat, statIdx) => (
-                <div key={statIdx} className="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">
-                  <dt className="text-base leading-7 text-gray-300">{stat.label}</dt>
-                  <dd className="text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
-                </div>
-              ))}
-            </dl> */}
           </div>
         </div>
 
         {/* Image section */}
         <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
-            src="https://cms.falkenberg.se/wp-content/uploads/2022/02/fbgsommardel3-31-1920x1080.jpg"
+            src="/fbgsommardel3-31-1920x1080.jpg"
             alt=""
             className="aspect-[9/4] w-full object-cover xl:rounded-3xl"
           />
@@ -469,30 +425,28 @@ export default function Example() {
                 <p className="mt-6 text-lg leading-8 text-gray-300">
                   Ditt problem är vår utmaning. Lösningen är ditt resultat.
                 </p>
-                <ul
-                  role="list"
-                  className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2"
-                >
-                  {benefits.map((benefit) => (
-                    <li key={benefit} className="flex gap-x-3">
-                      <CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-10 flex">
-                
-                {/* <button class="relative inline-flex items-center p-3 rounded-full bg-pink-500 text-white hover:bg-blue-600 focus:outline-none">
-                    <span class="absolute h-3 w-3 rounded-full bg-blue-400 opacity-75 animate-ping"></span>
-                    <span class="relative">Click Me</span>
-                </button> */}
-                  <a href="/book" className="text-sm font-semibold leading-6 text-pink-600 flex">
-                    <span class="relative flex h-4 w-4 my-auto mr-3">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-4 w-4 bg-pink-600"></span>
-                    </span>
-                    Boka ett möte <span aria-hidden="true">&rarr;</span>
-                  </a>
+                <div className="flex flex-col-reverse lg:flex-col">
+                  <ul
+                    role="list"
+                    className="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2"
+                  >
+                    {benefits.map((benefit) => (
+                      <li key={benefit} className="flex gap-x-3">
+                        <CheckCircleIcon className="h-7 w-5 flex-none" aria-hidden="true" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-10 flex">
+                  
+                    <a href="/book" target="_blank" className="text-sm font-semibold leading-6 text-pink-600 flex">
+                      <span className="relative flex h-4 w-4 my-auto mr-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-4 w-4 bg-pink-600"></span>
+                      </span>
+                      Boka ett möte <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
