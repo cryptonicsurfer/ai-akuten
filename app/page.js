@@ -98,7 +98,7 @@ const benefits = [
   'Produktiva lösningar på komplexa problem',
   'Ni behöver inte kunna det för att dra nytta"',
   'Olika prismodeller, men som alla ger värde > kostnaden',
-  'Anpassat efter behov (som ni kanskee inte visste ni hade)',
+  'Anpassat efter behov (som ni kanske inte visste ni hade)',
   'Nyttan kommer att vara omedelbar',
   'God affärsförståelse',
 ]
@@ -162,7 +162,7 @@ export default function Example() {
                 // https://ideogram.ai/api/images/direct/GP9Scs0PRfG0Wd-_uq38Gg.jpg
                 alt=""
               />
-              <span className="text-xl my-auto font-bold font-bungee-hairline" >AI<span className="text-pink-600 animate-pulse">+</span>akuten</span>
+              <span className="text-white text-xl my-auto font-bold font-bungee-hairline" >AI<span className="text-pink-600 animate-pulse">+</span>akuten</span>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -245,9 +245,9 @@ export default function Example() {
           <div className="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
             {/* <h2 className="text-6xl font-bold tracking-tight text-white sm:text-6xl my-4">AI<span className="text-pink-600 animate-pulse">+</span>akuten </h2> */}
 
-            <h2 className="text-5xl font-bold tracking-tight text-white sm:text-6xl my-4 font-bungee-hairline">
+            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl my-4 font-bungee-hairline">
               AI<span className="text-pink-600 animate-pulse">+</span>akuten
-            </h2>
+            </h1>
             {/* <h3   className="text-2xl font-bold tracking-tight text-white sm:text-2xl" style={{ fontFamily: "'Bungee Hairline', sans-serif" }}>
               Minska din AI-ångest: Låt oss göra tekniken enkel och lönsam för dig 
             </h3> */}
@@ -328,7 +328,7 @@ export default function Example() {
             <div className="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
               <div>
                 <p>
-                Välkomna till AI<span className='text-pink-600 font-bold'>+</span>akuten, Falkenbergs guide inom artificiell intelligens. Hastigheten av utvecklingen manade till en resurs som samlat kan ta till sig kunskap, för att dela med sig till dig.
+                Välkomna till AI-akuten, Falkenbergs guide inom artificiell intelligens. Hastigheten av utvecklingen manade till en resurs som samlat kan ta till sig kunskap, för att dela med sig till dig.
                 </p>
                 <p className="mt-8">
                 Vår process är enkel. Vi börjar med lågt hängande frukt, där enkel implementation och lättnavigerad teknik får stor bäring för resultat och verksamhet.
@@ -339,7 +339,7 @@ export default function Example() {
                 Med hjälp av AI, kan arbetsmoment automatiseras och frigöra tid för era anställda så de kan fokusera på sånt som gör störst nytta. 
                 </p>
                 <p className="mt-8">
-                Med AI<span className='text-pink-600 font-bold'>+</span>akuten, blir AI-resan klarare och enklare. Vi stödjer er att utforska och tillämpa AI’s potential. Ta steget mot innovation med oss.
+                Med AI-akuten, blir AI-resan klarare och enklare. Vi stödjer er att utforska och tillämpa AI’s potential. Ta steget mot innovation med oss.
                 </p>
                 <p className="mt-8">
                   <a href="/book" target="_blank" className="text-sm font-semibold leading-6 text-pink-600 flex">

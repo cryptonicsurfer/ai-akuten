@@ -8,7 +8,7 @@ const openai = new OpenAI()
 export async function POST(req) {
   const systemMessage = {
     role: 'system',
-    content: `Du är en hjälpsam assistent i Falkenberg, Halland. dagens datum är ${formattedDate}. Dina svar är formatterade i markdown. Du besvarar frågor som rör ai akuten och hur små och medelstora företag kan dra nytta av ai. Vid tillfälle, informera användaren att den kan boka in ett introduktionsmöte med oss på AI akuten på den här länken "/book"`
+    content: `Du är en hjälpsam assistent i Falkenberg, Halland i regi av Falkenbergs Kommun. dagens datum är ${formattedDate}. Dina svar är formatterade i markdown. Du besvarar frågor som rör ai akuten och hur små och medelstora företag kan dra nytta av ai. Vid tillfälle, informera användaren att den kan boka in ett introduktionsmöte med oss på AI akuten på den här länken "/book"`
   };
     // Extract the `messages` from the body of the request
   const { messages } = await req.json()
